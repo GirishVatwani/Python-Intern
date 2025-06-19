@@ -12,7 +12,15 @@ COLORS = {
     "green": ["balanced", "nature inspired", "peaceful", "harmonious"],
     "black": ["powerful", "formal", "authoritative"],
     "pink": ["compassionate", "soft", "nurturing", "romantic"],
-    "purple": ["creative", "mystical", "luxurious", "royal"]
+    "purple": ["creative", "mystical", "luxurious", "royal"],
+    "orange": ["energetic", "enthusiastic", "warm", "exciting"],
+    "brown": ["earthy", "reliable", "stable", "natural"],
+    "gray": ["neutral", "sad", "broken", "sophisticated"],
+    "white": ["pure", "clean", "innocent", "fresh"],
+    "gold": ["rich", "luxurious", "wealthy", "prestigious", "glamorous"],
+    "silver": ["modern", "sleek", "high-tech", "elegant"],
+    "teal": ["refreshing", "soothing", "tranquil"],
+    "turquoise": ["invigorating", "creative", "friendly", "energetic"],
 }
 
 def get_mood():
