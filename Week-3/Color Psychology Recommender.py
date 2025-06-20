@@ -98,7 +98,7 @@ def recommend_color(mood):
     for color, adjectives in COLORS.items():
         if mood in adjectives:
             return color
-    return "No specific color found for your mood."
+    return None
 
 def reccomend_outfit(mood, color):
     if color in OUTFITS:
@@ -109,7 +109,13 @@ def reccomend_outfit(mood, color):
 def main():
     mood = get_mood()
     recommended_color = recommend_color(mood)
+
+    if recommend_color is None:
+        print("Try with other words to describe your mood.")
+        return main()
+    
     outfit_recommendations = reccomend_outfit(mood, recommended_color)
+    
     print(f"Based on your mood '{mood}', we recommend the color: {recommended_color}")
     print("Here are some outfit recommendations:")
     for outfit in outfit_recommendations:
