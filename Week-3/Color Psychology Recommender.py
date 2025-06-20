@@ -6,9 +6,9 @@
 
 
 COLORS = {
-    "red": ["energeitcic", "cassionate", "confident"],
+    "red": ["energetic", "passionate", "confident"],
     "blue": ["calm", "trustworthy", "stable", "serene", "relaxed"],
-    "yellow": ["optimiscic", "happy", "cheerful", "friendly"],
+    "yellow": ["optimistic", "happy", "cheerful", "friendly"],
     "green": ["balanced", "nature inspired", "peaceful", "harmonious"],
     "black": ["powerful", "formal", "authoritative"],
     "pink": ["compassionate", "soft", "nurturing", "romantic"],
@@ -100,7 +100,7 @@ def recommend_color(mood):
             return color
     return None
 
-def reccomend_outfit(mood, color):
+def reccomend_outfit(color):
     if color in OUTFITS:
         return OUTFITS[color]
     else:
@@ -110,11 +110,11 @@ def main():
     mood = get_mood()
     recommended_color = recommend_color(mood)
 
-    if recommend_color is None:
+    if recommended_color is None:
         print("Try with other words to describe your mood.")
         return main()
     
-    outfit_recommendations = reccomend_outfit(mood, recommended_color)
+    outfit_recommendations = reccomend_outfit(recommended_color)
     
     print(f"Based on your mood '{mood}', we recommend the color: {recommended_color}")
     print("Here are some outfit recommendations:")
